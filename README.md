@@ -7,6 +7,3 @@
 - За потребою, додаємо скрипту `generate_events_tracking.rb` права на виконання `chmod +x generate_events_tracking.rb`
 - Запускаємо скрипт `./generate_events_tracking.rb`
 - Запускаємо playground і бачимо у консолі, що трекати наш умовний логгер вміє івенти у зручній для нас формі Enum'у, івенти успішно серіалізуються у Json та парсяться з нього назад
-
-Рішення по парсингу невідомих значень Enum взято звідси
-https://5sw.de/2022/01/unknown-enum-cases/
