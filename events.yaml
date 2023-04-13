@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+    title: Analytics events
+    description: Analytics events
+    version: '1.0.0'
+paths:
+  /test:
+    get:
+      responses:
+        '200':
+          description: ''
+    
+components:
+  schemas:
+    trip_report_tap:
+      description: "Event Trip Report Tap"
+      type: object
+      properties:
+        Source:
+          type: string
+          enum: 
+            - Trips List
+            - Trip Details
+          description: "Екран, з якого натиснута кнопка"
+      required:
+        - Source
+    report_an_accident_tap:
+      description: "Event Report An Accident Tap"
+      type: object
+      properties:
+        Source:
+          type: string
+          enum: 
+            - Trips List
+            - Trip Details
+            - Active Order
+          description: "Екран, з якого натиснута кнопка"
+      required:
+        - Source
+    main_screen:
+      description: "Event Main Screen"
