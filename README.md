@@ -3,7 +3,6 @@
 Вимоги: 
 Для запуску скриптів необхідно встановити [swagger-codegen](https://github.com/swagger-api/swagger-codegen#os-x-users) та за потребою - сучасну версію Ruby (не старше 3.2.0)
 
-Кроки для запуску демо:
 Для запуску демо:
 - За потребою, додаємо скрипту `generate_events_tracking.rb` права на виконання `chmod +x generate_events_tracking.rb`
 - Запускаємо скрипт `./generate_events_tracking.rb`
