@@ -72,7 +72,7 @@ class ParsedEvent
 
 	def has_custom_key_entry
 		if @dto_name 
-			"case .#{@enum_case}(_):
+			"case .#{@enum_case}:
             return true"
 		else 
 			"case .#{@enum_case}:
