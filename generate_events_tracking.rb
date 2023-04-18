@@ -49,7 +49,7 @@ class ParsedEvent
 		if @dto_name 
 	 	    "case #{@enum_case}(#{@dto_name})"
 		else 
-			"case #{@enum_case}"
+		    "case #{@enum_case}"
 		end
 	end
 
