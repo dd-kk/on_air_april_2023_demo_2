@@ -10,7 +10,11 @@ class ParsedEvent
 	end
 
 	def parse_enum_case(description)
-		description.gsub(':', '_').gsub('.', '_').gsub(' ', '_').downcase
+		to_snake_case(description)
+	end
+
+	def to_snake_case(text)
+		text.gsub(':', '_').gsub('.', '_').gsub(' ', '_').downcase
 	end
 
 	def parse_event_name(description)
@@ -23,15 +27,8 @@ class ParsedEvent
 	end
 
 	def parse_dto_name(properties)
-		if properties 
-			if @event_name == 'TooManyReconnects'
-				return 'TooManyReconnects'
-			end
-			if @event_name == 'main_screen'
-				return 'main_screen'
-			else
-				@event_name.gsub(':', '_').gsub('.', '_').gsub(' ', '_').split('_').map { |e| e.capitalize  }.join('')
-			end
+		if properties
+			to_snake_case(@event_name).split('_').map { |e| e.capitalize  }.join('')
 		else 
 			return nil
 		end
