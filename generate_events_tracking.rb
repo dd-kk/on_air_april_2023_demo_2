@@ -34,14 +34,6 @@ class ParsedEvent
 		end
 	end
 
-	def detailed
-		if @dto_name
-			"Event #{@event_name} with dto named #{@dto_name}"
-		else 
-			"Event #{@event_name} without properties"
-		end
-	end
-
 	def generate_enum_entrance
 		if @dto_name 
 	 	    "case #{@enum_case}(#{@dto_name})"
